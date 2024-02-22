@@ -1,0 +1,13 @@
+services:
+  #name of the app (in this case vue-app)
+  vue-app:
+    build:
+      context: ./dockerfiles
+      dockerfile: dev.dockerfile
+    
+    ports:
+      - "8000:8000"
+    
+    volumes:
+      - .:/app
+      - /app/node_modules
