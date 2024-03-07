@@ -3,7 +3,7 @@ FROM node:lts-alpine as build-stage
 WORKDIR /app
 
 #copy package
-COPY ../package*.json ./
+COPY ./vue/package*.json ./
 
 RUN npm install
 
