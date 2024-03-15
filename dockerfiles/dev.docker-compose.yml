@@ -2,13 +2,13 @@ services:
   #name of the app (in this case vue-app)
   vue-app:
     build:
-      context: ./
-      dockerfile: ./dockerfiles/dev.dockerfile
+      context: .
+      dockerfile: ./dev.dockerfile
     
     ports:
       - "8000:8000"
-    #a volume in the host to install the project
+    #a volume in the host to install the project and map host node_modules to container
     volumes:
-      - ./vue:/app
-      - /app/node_modules
+      - .:/app
+      - ./node_modules:/app/node_modules
 
