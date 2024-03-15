@@ -1,0 +1,1 @@
+docker compose -f dev.docker-compose.yml exec vue-app $1 $2 $3
