@@ -11,3 +11,4 @@ EXPOSE 8000
 
 #keep container alive
 ENTRYPOINT ["tail", "-f", "/dev/null"]
+
